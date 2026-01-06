@@ -1,0 +1,29 @@
+{
+  "overall": {
+    "eer": 0.43254604285418663,
+    "eer_threshold": 0.9999973773956299,
+    "auc": 0.5911091789416258,
+    "accuracy_at_eer": 0.5507060333761232,
+    "num_samples": 12464,
+    "num_bonafide": 1560,
+    "num_spoof": 10904
+  },
+  "per_dataset": {
+    "svdd": {
+      "eer": 0.4316262470859006,
+      "auc": 0.5905688470695495,
+      "num_samples": 12326,
+      "num_bonafide": 1490,
+      "num_spoof": 10836
+    },
+    "singfake": {
+      "eer": 0.5363445378151261,
+      "auc": 0.5010504201680672,
+      "num_samples": 138,
+      "num_bonafide": 70,
+      "num_spoof": 68
+    }
+  },
+  "model_path": "./checkpoints/baseline_speech_only_3branch/best_stage3_3branch.pth",
+  "manifest_path": "data/cross_domain/manifest_test_singing_only.csv"
+}

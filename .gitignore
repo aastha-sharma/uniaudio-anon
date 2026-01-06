@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Envs
+singfake_env/
+.venv/
+venv/
+
+# Logs / outputs
+logs/
+runs/
+outputs/
+wandb/
+
+# Checkpoints / models
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Data (do not upload)
+data/
+datasets/
+*.wav
+*.flac
+*.mp3
+*.m4a
+
+# OS / editor
+.DS_Store
+*.swp

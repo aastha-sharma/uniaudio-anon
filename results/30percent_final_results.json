@@ -1,0 +1,34 @@
+{
+  "model_path": "checkpoints/few_shot_supervised_30percent_final/best_stage3_fewshot.pth",
+  "manifest_path": "data/cross_domain/manifest_test_singing_only.csv",
+  "total_samples": 12464,
+  "overall": {
+    "EER": 0.480159480407096,
+    "AUC": 0.5217774411178208,
+    "Accuracy": 0.5198170731707317,
+    "Precision": 0.8832787907121707,
+    "Recall": 0.5198092443140132,
+    "F1": 0.654465677501299,
+    "Threshold": 0.5244231224060059
+  },
+  "per_dataset": {
+    "singfake": {
+      "EER": 0.5869747899159664,
+      "AUC": 0.4300420168067227,
+      "Accuracy": 0.41304347826086957,
+      "Precision": 0.4057971014492754,
+      "Recall": 0.4117647058823529,
+      "F1": 0.40875912408759124,
+      "Threshold": 0.5279135704040527
+    },
+    "svdd": {
+      "EER": 0.47310357471119135,
+      "AUC": 0.5313263209138814,
+      "Accuracy": 0.5269349342852507,
+      "Precision": 0.8901013250194856,
+      "Recall": 0.5269472129937246,
+      "F1": 0.661990609240044,
+      "Threshold": 0.524311900138855
+    }
+  }
+}

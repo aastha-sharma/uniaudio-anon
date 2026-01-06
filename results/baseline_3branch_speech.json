@@ -1,0 +1,36 @@
+{
+  "overall": {
+    "eer": 0.11343820833063215,
+    "eer_threshold": 0.9998021721839905,
+    "auc": 0.9426231328707038,
+    "accuracy_at_eer": 0.8865514157973174,
+    "num_samples": 167750,
+    "num_bonafide": 18653,
+    "num_spoof": 149097
+  },
+  "per_dataset": {
+    "asvspoof2019": {
+      "eer": 0.0037565034295226453,
+      "auc": 0.9996417074474223,
+      "num_samples": 18029,
+      "num_bonafide": 1873,
+      "num_spoof": 16156
+    },
+    "asvspoof2021": {
+      "eer": 0.137835391798324,
+      "auc": 0.9242101906742042,
+      "num_samples": 145331,
+      "num_bonafide": 14815,
+      "num_spoof": 130516
+    },
+    "wavefake": {
+      "eer": 0.00046063849321894884,
+      "auc": 0.9999890873796595,
+      "num_samples": 4390,
+      "num_bonafide": 1965,
+      "num_spoof": 2425
+    }
+  },
+  "model_path": "./checkpoints/baseline_speech_only_3branch/best_stage3_3branch.pth",
+  "manifest_path": "data/cross_domain/manifest_test_speech_only.csv"
+}
