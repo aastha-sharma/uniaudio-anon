@@ -34,3 +34,7 @@ datasets/
 # OS / editor
 .DS_Store
 *.swp
+# Absolute-path manifests (do not upload)
+manifest.csv
+eval_only_manifest.csv
+manifest_backup_*.csv
