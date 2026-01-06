@@ -1,5 +1,5 @@
 {
-  "model_path": "checkpoints/full_finetune_100pct_singing/best_stage3_fewshot.pth",
+  "model_path": "checkpoints/50_50_best_stage3_fewshot.pth",
   "manifest_path": "manifest.csv",
   "split": "test",
   "total_samples": 115690,
