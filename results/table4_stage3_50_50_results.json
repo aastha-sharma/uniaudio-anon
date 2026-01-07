@@ -3,7 +3,7 @@
   "manifest_path": "manifest.csv",
   "split": "test",
   "total_samples": 115690,
-  "overall": {
+  "overall": { 
     "EER": 0.06988686320402887,
     "AUC": 0.973146998544723,
     "Accuracy": 0.9301063186100786,
