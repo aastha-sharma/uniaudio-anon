@@ -1,0 +1,34 @@
+{
+  "train_cfg": {
+    "stage2_epochs": 25,
+    "stage3_epochs": 5,
+    "batch_size": 16,
+    "lr_stage2": 2e-4,
+    "lr_stage3": 3e-5,
+    "speech_ratio_s3": 0.5,
+    "lambda_aux": 0.1,
+    "lambda_ent": 1e-4,
+    "lambda_div": 0.1,
+    "temp_schedule": "linear_1.8_to_1.2",
+    "seed": 42
+  },
+  "eval": {
+    "ctrsvdd": {
+      "dataset": "CtrSVDD",
+      "split": "eval",
+      "num_samples": 12326,
+      "eer": 0.0182,
+      "auc": 0.9985
+    },
+    "speech": {
+      "dataset": "ASVspoof2019",
+      "split": "test",
+      "num_samples": 18029,
+      "eer": 0.0038,
+      "auc": 0.9991
+    }
+  },
+  "model_path": "checkpoints/uniaudio_temp_sweep/tau_linear_1.8_to_1.2/best_stage3.pth",
+  "manifest_path": "data/cross_domain/manifest_test_singing_only.csv",
+  "speech_manifest_path": "data/cross_domain/manifest_test_speech_only.csv"
+}
