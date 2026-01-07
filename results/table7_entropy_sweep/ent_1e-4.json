@@ -1,13 +1,25 @@
 {
-  "lambda_ent": 1e-4,
-  "dataset": "CtrSVDD",
-  "split": "eval",
-  "metrics": {
-    "eer": 0.0182,
-    "auc": 0.9985,
+  "train_cfg": {
+    "stage3_epochs": 5,
+    "batch_size": 16,
+    "lr": 3e-5,
+    "speech_ratio_s3": 0.5,
+    "lambda_aux": 0.1,
+    "lambda_ent": 1e-4,
+    "lambda_div": 0.1,
+    "temp_schedule": "1.8->1.2",
+    "seed": 42
+  },
+  "eval": {
+    "dataset": "CtrSVDD",
+    "split": "eval",
     "num_samples": 12326,
+    "eer": 0.0182,
+    "auc": 0.9985
+  },
+  "extras": {
     "gate_collapse": false,
-    "avg_alpha_max": 0.52,
+    "avg_alpha_max": 0.52
   },
   "model_path": "checkpoints/uniaudio_entropy_sweep/lent_1e-4/best_stage3.pth",
   "manifest_path": "data/cross_domain/manifest_test_singing_only.csv"
