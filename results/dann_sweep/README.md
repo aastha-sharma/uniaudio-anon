@@ -1,1 +1,1 @@
-DANN sweep results for singing-only evaluation.
+Systematic domain adaptation sweep on singing (10–30% target data; stage/freeze/regularization variants)
