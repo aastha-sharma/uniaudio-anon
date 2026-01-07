@@ -2,7 +2,7 @@
   "model_path": "checkpoints/few_shot_supervised_30percent_unfrozen/best_stage3_fewshot.pth",
   "manifest_path": "data/cross_domain/manifest_test_singing_only.csv",
   "total_samples": 12464,
-  "overall": {
+  "overall": { 
     "EER": 0.5142046202757868,
     "AUC": 0.47620671430855765,
     "Accuracy": 0.4857188703465982,
