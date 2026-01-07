@@ -1,0 +1,14 @@
+{
+  "lambda_ent": 5e-4,
+  "dataset": "CtrSVDD",
+  "split": "eval",
+  "metrics": {
+    "eer": 0.0234,
+    "auc": 0.9979,
+    "num_samples": 12326,
+    "gate_collapse": false,
+    "avg_alpha_max": 0.42,
+  },
+  "model_path": "checkpoints/uniaudio_entropy_sweep/lent_5e-4/best_stage3.pth",
+  "manifest_path": "data/cross_domain/manifest_test_singing_only.csv"
+}
