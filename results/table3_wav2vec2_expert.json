@@ -1,0 +1,30 @@
+{
+  "overall": {
+    "eer": 0.11712,
+    "num_samples": 30493,
+    "num_bonafide": 3433,
+    "num_spoof": 27060
+  },
+  "per_dataset": {
+    "asvspoof2019": {
+      "eer": 0.0566,
+      "num_samples": 18029,
+      "num_bonafide": 1873,
+      "num_spoof": 16156
+    },
+    "singfake": {
+      "eer": 0.1450,
+      "num_samples": 138,
+      "num_bonafide": 70,
+      "num_spoof": 68
+    },
+    "ctrsvdd": {
+      "eer": 0.2053,
+      "num_samples": 12326,
+      "num_bonafide": 1490,
+      "num_spoof": 10836
+    }
+  },
+  "model_path": "./checkpoints/experts/wav2vec2/best.pth",
+  "manifest_path": "data/manifest.csv"
+}
