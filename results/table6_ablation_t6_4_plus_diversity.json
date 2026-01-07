@@ -1,0 +1,43 @@
+{
+  "overall": {
+    "ctrsvdd_eer": 0.0345,
+    "speech_eer": 0.0039
+  },
+  "per_dataset": {
+    "ctrsvdd": {
+      "eer": 0.0345,
+      "num_samples": 12326,
+      "num_bonafide": 1490,
+      "num_spoof": 10836
+    },
+    "speech_test_pooled": {
+      "eer": 0.0039,
+      "num_samples": 22419,
+      "num_bonafide": 3838,
+      "num_spoof": 18581,
+      "components": {
+        "asvspoof2019": {
+          "num_samples": 18029,
+          "num_bonafide": 1873,
+          "num_spoof": 16156
+        },
+        "wavefake": {
+          "num_samples": 4390,
+          "num_bonafide": 1965,
+          "num_spoof": 2425
+        }
+      }
+    }
+  },
+  "ablation_row": "+ Diversity penalty (lambda_div = 0.1)",
+  "ablation_config": {
+    "lambda_aux": 0.1,
+    "lambda_ent": 0.0001,
+    "lambda_div": 0.1
+  },
+  "model_path": "./checkpoints/ablations/t6_plus_diversity/best.pth",
+  "manifest_paths": {
+    "ctrsvdd_eval": "data/cross_domain/manifest_test_singing_only.csv",
+    "speech_test": "data/cross_domain/manifest_test_speech_only.csv"
+  }
+}
