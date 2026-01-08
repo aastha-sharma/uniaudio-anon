@@ -1,4 +1,4 @@
-# src/train/train_expert.py - COMPLETE WITH WARMUP/UNFREEZE
+# src/train/train_expert.py 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -181,7 +181,7 @@ def train(manifest, kind='logmel', epochs=6, batch=32, lr=1e-3, device='cuda', w
         HEAD_LR = lr                    # CLI --lr (recommend 3e-4)
         step = 0
         
-        print(f"\n🔥 W2V WARMUP CONFIG:")
+        print(f"\n W2V WARMUP CONFIG:")
         print(f"  WARMUP_STEPS: {WARMUP_STEPS}")
         print(f"  HEAD_LR: {HEAD_LR:.2e}")
         print(f"  BASE_LR_AFTER_WARMUP: {BASE_LR_AFTER_WARMUP:.2e}")
@@ -237,7 +237,7 @@ def train(manifest, kind='logmel', epochs=6, batch=32, lr=1e-3, device='cuda', w
                     opt.param_groups[0]['lr'] = HEAD_LR
                     if len(opt.param_groups) > 1:
                         opt.param_groups[1]['lr'] = BASE_LR_AFTER_WARMUP
-                    print(f"\n🔓 > Unfrozen BASE. LRs -> HEAD:{HEAD_LR:.2e}, BASE:{BASE_LR_AFTER_WARMUP:.2e}\n")
+                    print(f"\n > Unfrozen BASE. LRs -> HEAD:{HEAD_LR:.2e}, BASE:{BASE_LR_AFTER_WARMUP:.2e}\n")
             
             # ===== REGULAR TRAINING =====
             x = x.to(device)
@@ -310,7 +310,7 @@ def train(manifest, kind='logmel', epochs=6, batch=32, lr=1e-3, device='cuda', w
             os.makedirs('checkpoints', exist_ok=True)
             checkpoint_path = f'checkpoints/{kind}_pretrained.pth'
             torch.save(model.state_dict(), checkpoint_path)
-            print(f"  ✅ Best model saved! Improved by {improvement:.4f}")
+            print(f"   Best model saved! Improved by {improvement:.4f}")
         else:
             print(f"  No improvement (best: {best_eer:.4f})")
         
