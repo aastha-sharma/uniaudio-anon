@@ -9,7 +9,7 @@
     "num_spoof": 10904
   },
   "per_dataset": {
-    "svdd": {
+    "ctrsvdd": {
       "eer": 0.4316262470859006,
       "auc": 0.5905688470695495,
       "num_samples": 12326,
