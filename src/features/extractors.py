@@ -1,4 +1,4 @@
-# src/features/extractors.py - Production-ready version
+# src/features/extractors.py
 import torch
 import torch.nn as nn
 import torchaudio
